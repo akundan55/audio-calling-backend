@@ -1,0 +1,21 @@
+https://github.com/jsdecena/laracom
+
+
+composer create-project --prefer-dist laravel/laravel ecom12
+
+php artisan migrate
+
+php artisan serve
+
+php artisan make:controller Admin/AdminController --resource --model=Admin
+
+php artisan make:migration create_admins_table
+
+php artisan make:middleware Admin
+
+php artisan make:seeder AdminsTableSeeder
+
+php artisan db:seed --class=AdminsTableSeeder
+
+php artisan make:request Admin/LoginRequest
+
